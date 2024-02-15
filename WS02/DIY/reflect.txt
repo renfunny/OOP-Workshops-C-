@@ -1,0 +1,19 @@
+
+Workshop 2 - Part 2
+--------------------
+
+This week's workshop involved using dynamic memory when creating a program that manages book reservations.
+
+The program involved creating a Guest.cpp and Guest.h files, within these files a struct called Guest was used to 
+store each guest's details, such as their first and last name as well as an indicator to check if they are adults 
+or children. Within these files we also created a handful of functions, the first one being:
+1. set function - checks if first and last name are not null and if age is more than 0, if so it will allocate memory to the pointers and copy the data to the dynamic memory, if not it will set all pointers to null. 
+2. print function - checks if pointers are null, if they are it will assume the guest has vacated and it will print "Vacated!", if they are not null it will print the guest's information 
+3. book function - it will get the user input for the guest's information and call the set function with the data gathered from the user
+4. vacate function - it will delete the memory allocated to the pointers and set them to null so it shows they have vacated 
+
+The program also involved creating Room.cpp and Room.h files, within these files a struct called Room was used to store the room's number, the number of guests, and the guest's information (Guest structure). Within these files we also created a handful of functions:
+1. set function - sets the room number, number of guests and the length of the Guest struct, it then sets each guest to nullptr 
+2. print function - if the guests aren't null it will print the Room Number and print each guest individually using the print function in the Guest.cpp file, if guests are null it will print "empty room
+3. book function - It will gather information about the room number, number of guests from the user and set them, as well as book each guest based on the number of guests information gathered form the user
+4. vacate function - for each guests it will call the vacate function from the Guest.cpp and then delete the memory allocated to the pointers
