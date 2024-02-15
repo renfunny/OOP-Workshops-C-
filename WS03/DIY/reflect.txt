@@ -1,0 +1,14 @@
+
+Workshop 04
+—————————
+This week’s topic was member functions and privacy. To gain practical experience we were tasked to develop a program for an ice cream vendor. Two modules were created, the IceCream module and the Vendor module. Within the Ice cream class, I was able to store the characteristics of that ice cream, such as flavour which stores an int value based on the users input, the number of scoops which is also an int value from 1-3, a bool type to see if the user picked the wafer cone, and a bool type to see if the flavour picked was chocolate. Because the IceCream is a class it makes these variables private. I also created a public variable called price which will store the total cost of the ice cream depending on the users choices, and some member functions.
+The first member function was getOrder which asks the user questions to populate the IceCream class variables.
+The second member function is printOrder, which prints the breakdown of the costs of the ice cream
+For the Vendor module I created the following private variables:
+int m_noOfOrders to store how many ice creams the user wants to order
+IceCream* m_orders which points to the IceCream object
+as well as some member functions such as
+setEmpty which sets the Vendor variables to an empty state
+takeOrders which displays the welcome message, gets the number of orders, and calls getOrder for each order 
+displayOrders which calls the printordernfucntiot for each order and the prints the sum of both orders
+clearData which cleaned all variables in the Vendor object.

@@ -1,0 +1,15 @@
+
+Workshop 04
+--------------
+
+This week's workshop focused on constructors and reconstructors as well as the 'this' keyword. Constructors are used to initialize our class members when they are created, this way we avoid garbage values and can safely set each variable to an empty state. Destructors in the other hand, are used to deallocate memory before the object goes out of scope. In this week's workshop we were responsible of creating A Guitar module that stored a dynamic array of GuitarStr (which stored the material and gauge), the number of GuitarStr, and the guitar's model name. We also created:
+The Guitar(const char* mod) constructor which initialized the variables of the Guitar class, and set the model to the default "Stratocaster" value.
+The Guitar(GuitarStr strs[], int ns, const char* mod) constructor which initialized the data based on the parameters passed by the user after checking if the parameters were valid values, if not it would remain in an empty state
+The ~Guitar() destructor which deallocated the m_strings variable which held the GuitarStr object.
+We also created the following member functions:
+bool changeString(const GuitarStr& gs, int sn) Which would check if the sn was a valid index, if so it would change the string located in that index and return true, otherwise it would just return false
+void reString(GuitarStr strs[], int ns) Which would check if the number of strings (ns) is valid and will then set the m_numStrigns = ns, m_strings = to a new GuitarStr object, and set each element of the GuitarStr object to the GuitarStr values passed in the strs parameter
+void deString() which would deallocate all resources held by the Guitar object and set them to an empty state
+bool strung() const which would return true if the m_numStrings is above 0
+bool matchGauge(double ga) const which would return true if the GuitarStr objects had a matching gauge value as the one being passed 
+std::ostream& display(std::ostream& os = std::cout) const which handled displaying the information to the user accordingly

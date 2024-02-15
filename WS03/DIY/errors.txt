@@ -1,0 +1,4 @@
+Icecream.cpp: In function ‘int seneca::getInt(int, int)’:
+Icecream.cpp:33:2: warning: control reaches end of non-void function [-Wreturn-type]
+  }
+  ^

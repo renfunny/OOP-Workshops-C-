@@ -1,0 +1,14 @@
+﻿  io.cpp
+graph.obj : error LNK2019: unresolved external symbol "void __cdecl seneca::printInt(int,int)" (?printInt@seneca@@YAXHH@Z) referenced in function "void __cdecl getSamples(int * const,int)" (?getSamples@@YAXQEAHH@Z)
+graph.obj : error LNK2019: unresolved external symbol "int __cdecl seneca::getInt(int,int)" (?getInt@seneca@@YAHHH@Z) referenced in function "void __cdecl getSamples(int * const,int)" (?getSamples@@YAXQEAHH@Z)
+main.obj : error LNK2001: unresolved external symbol "int __cdecl seneca::getInt(int,int)" (?getInt@seneca@@YAHHH@Z)
+graph.obj : error LNK2019: unresolved external symbol "void __cdecl seneca::goBack(int)" (?goBack@seneca@@YAXH@Z) referenced in function "void __cdecl getSamples(int * const,int)" (?getSamples@@YAXQEAHH@Z)
+graph.obj : error LNK2019: unresolved external symbol "void __cdecl seneca::labelLine(int,char const *)" (?labelLine@seneca@@YAXHPEBD@Z) referenced in function "void __cdecl printGraph(int * const,int,char const *)" (?printGraph@@YAXQEAHHPEBD@Z)
+main.obj : error LNK2001: unresolved external symbol "void __cdecl seneca::labelLine(int,char const *)" (?labelLine@seneca@@YAXHPEBD@Z)
+graph.obj : error LNK2019: unresolved external symbol "void __cdecl seneca::line(int)" (?line@seneca@@YAXH@Z) referenced in function "void __cdecl getSamples(int * const,int)" (?getSamples@@YAXQEAHH@Z)
+io.obj : error LNK2001: unresolved external symbol "void __cdecl seneca::line(int)" (?line@seneca@@YAXH@Z)
+io.obj : error LNK2019: unresolved external symbol "int __cdecl seneca::intDigits(int)" (?intDigits@seneca@@YAHH@Z) referenced in function "void __cdecl printInt(int,int)" (?printInt@@YAXHH@Z)
+main.obj : error LNK2019: unresolved external symbol "void __cdecl seneca::getSamples(int * const,int)" (?getSamples@seneca@@YAXQEAHH@Z) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "void __cdecl seneca::printGraph(int * const,int,char const *)" (?printGraph@seneca@@YAXQEAHHPEBD@Z) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "int __cdecl seneca::menu(int)" (?menu@seneca@@YAHH@Z) referenced in function main
+\\Mac\Home\Desktop\OOP244\OOP-Workshops\WS01\lab\x64\Debug\lab.exe : fatal error LNK1120: 9 unresolved externals
