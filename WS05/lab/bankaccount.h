@@ -19,6 +19,10 @@
 namespace seneca
 {
    const int	 ACCT_MAXLEN_USER = 16;					// Max Length of user name
+   const double CHQ_FEE = 1.25;						// Fee for each cheque transaction
+   const double SAV_FEE = 3.50;						// Fee for each savings transaction
+   const double CHQ_INTEREST = 0.5;					// Interest rate for chequing account
+   const double SAV_INTEREST = 2.5;					// Interest rate for savings account
 
    // Class Definition
    class bankAccount
@@ -39,10 +43,23 @@ namespace seneca
       // ADD: Type Conversion, Unary, Binary Operators & Additional Methods
       // ...
       operator bool() const;
+      operator double() const;
+      bankAccount& operator++();
+      bankAccount& operator--();
+      bool operator+= (double);
+      bool operator-= (double);
+      bool operator== (const bankAccount&) const;
+      bool operator> (double) const;
+      bool operator<= (double) const;
+      bool operator<< (bankAccount&);
+      void display (void) const;
    };
 
    // ADD: Global helpers
    // ...
+   bool operator> (double lhs, const bankAccount& rhs);
+
+   bool operator<= (double lhs, const bankAccount& rhs);
 }
 #endif
 
